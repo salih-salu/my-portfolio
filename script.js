@@ -175,19 +175,31 @@ const formStatus = document.getElementById('form-status');
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
     
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const subject = document.getElementById('subject').value;
-    const message = document.getElementById('message').value;
-    
-    // Simulate successful API submission
     formStatus.className = 'form-status';
     formStatus.textContent = 'Sending message...';
     formStatus.style.color = 'var(--accent-blue)';
     
-    setTimeout(() => {
-        formStatus.textContent = 'Thank you, ' + name + '! Your message has been sent successfully.';
-        formStatus.style.color = '#10b981';
-        contactForm.reset();
-    }, 1500);
+    const formData = new FormData(contactForm);
+    
+    fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+    })
+    .then(async (response) => {
+        let json = await response.json();
+        if (response.status == 200) {
+            formStatus.textContent = 'Thank you! Your message has been sent successfully.';
+            formStatus.style.color = '#10b981';
+            contactForm.reset();
+        } else {
+            console.log(response);
+            formStatus.textContent = json.message || 'Something went wrong. Please try again.';
+            formStatus.style.color = '#ef4444';
+        }
+    })
+    .catch(error => {
+        console.log(error);
+        formStatus.textContent = 'Network error. Please try again later.';
+        formStatus.style.color = '#ef4444';
+    });
 });

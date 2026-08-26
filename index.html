@@ -221,8 +221,8 @@
             <div class="projects-grid">
                 <!-- Project 1 -->
                 <article class="project-card glass-card">
-                    <div class="project-img-placeholder">
-                        <i class="fas fa-road project-icon-bg"></i>
+                    <div class="project-image-wrapper">
+                        <img src="project_toll_system.jpg" alt="AI-Based Barrier-Free Toll System" class="project-image">
                     </div>
                     <div class="project-content">
                         <div class="project-tags">
@@ -244,8 +244,8 @@
 
                 <!-- Project 2 -->
                 <article class="project-card glass-card">
-                    <div class="project-img-placeholder">
-                        <i class="fas fa-shield-halved project-icon-bg"></i>
+                    <div class="project-image-wrapper">
+                        <img src="project_network_attack.jpg" alt="Network Attack Prediction System" class="project-image">
                     </div>
                     <div class="project-content">
                         <div class="project-tags">
@@ -267,8 +267,8 @@
 
                 <!-- Project 3 -->
                 <article class="project-card glass-card">
-                    <div class="project-img-placeholder">
-                        <i class="fas fa-head-side-mask project-icon-bg"></i>
+                    <div class="project-image-wrapper">
+                        <img src="project_face_mask.jpg" alt="Face Mask Detection System" class="project-image">
                     </div>
                     <div class="project-content">
                         <div class="project-tags">
@@ -290,8 +290,8 @@
 
                 <!-- Project 4 -->
                 <article class="project-card glass-card">
-                    <div class="project-img-placeholder">
-                        <i class="fas fa-heartbeat project-icon-bg"></i>
+                    <div class="project-image-wrapper">
+                        <img src="project_heart_disease.jpg" alt="Heart Disease Prediction" class="project-image">
                     </div>
                     <div class="project-content">
                         <div class="project-tags">
@@ -313,8 +313,8 @@
 
                 <!-- Project 5 -->
                 <article class="project-card glass-card">
-                    <div class="project-img-placeholder">
-                        <i class="fas fa-lungs project-icon-bg"></i>
+                    <div class="project-image-wrapper">
+                        <img src="project_lung_cancer.jpg" alt="Lung Cancer Prediction" class="project-image">
                     </div>
                     <div class="project-content">
                         <div class="project-tags">
@@ -336,8 +336,8 @@
 
                 <!-- Project 6 -->
                 <article class="project-card glass-card">
-                    <div class="project-img-placeholder">
-                        <i class="fas fa-leaf project-icon-bg"></i>
+                    <div class="project-image-wrapper">
+                        <img src="project_iris.jpg" alt="Iris Prediction Model" class="project-image">
                     </div>
                     <div class="project-content">
                         <div class="project-tags">
@@ -420,24 +420,27 @@
                 </div>
 
                 <div class="contact-form-container glass-card">
-                    <form id="contact-form" class="contact-form">
+                    <form id="contact-form" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                        <!-- Web3Forms Access Key -->
+                        <input type="hidden" name="access_key" value="b3658fb8-b826-493f-9f2c-694c11f4938d">
+                        
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="name">Your Name</label>
-                                <input type="text" id="name" required placeholder="John Doe">
+                                <input type="text" id="name" name="name" required placeholder="John Doe">
                             </div>
                             <div class="form-group">
                                 <label for="email">Your Email</label>
-                                <input type="email" id="email" required placeholder="john@example.com">
+                                <input type="email" id="email" name="email" required placeholder="john@example.com">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="subject">Subject</label>
-                            <input type="text" id="subject" required placeholder="Collaboration Proposal">
+                            <input type="text" id="subject" name="subject" required placeholder="Collaboration Proposal">
                         </div>
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea id="message" rows="5" required placeholder="Hi Salih, I'd like to work with you on..."></textarea>
+                            <textarea id="message" name="message" rows="5" required placeholder="Hi Salih, I'd like to work with you on..."></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary btn-block" id="form-submit-btn">
                             Send Message <i class="fas fa-paper-plane"></i>

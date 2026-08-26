@@ -657,58 +657,58 @@ body:hover .cursor-glow {
 }
 
 .project-card {
+    position: relative;
     display: flex;
     flex-direction: column;
     padding: 0;
-    height: 100%;
-}
-
-.project-img-placeholder {
-    height: 180px;
-    background: linear-gradient(135deg, rgba(7, 10, 19, 0.9) 0%, rgba(17, 24, 39, 0.9) 100%);
-    border-bottom: 1px solid var(--border-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+    height: 380px;
+    border-radius: 16px;
     overflow: hidden;
 }
 
-.project-img-placeholder::after {
-    content: '';
+.project-image-wrapper {
     position: absolute;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(0, 242, 254, 0.1) 0%, transparent 60%);
-    top: -50%;
-    left: -50%;
-    animation: flow-glow 8s infinite linear;
-}
-
-@keyframes flow-glow {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-.project-icon-bg {
-    font-size: 3.5rem;
-    color: rgba(255, 255, 255, 0.08);
-    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     z-index: 1;
-    transition: var(--transition-smooth);
+    overflow: hidden;
 }
 
-.project-card:hover .project-icon-bg {
-    color: var(--accent-blue);
-    transform: scale(1.1) rotate(5deg);
-    filter: drop-shadow(0 0 10px rgba(0, 242, 254, 0.5));
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .project-content {
-    padding: 1.8rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    z-index: 2;
+    background: rgba(7, 10, 19, 0.88);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-card:hover .project-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.08);
 }
 
 .project-tags {
@@ -738,7 +738,6 @@ body:hover .cursor-glow {
     color: var(--text-secondary);
     font-size: 0.95rem;
     margin-bottom: 1.5rem;
-    flex-grow: 1;
 }
 
 .project-footer {

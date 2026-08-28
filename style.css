@@ -1105,3 +1105,72 @@ body:hover .cursor-glow {
         font-size: 1.8rem;
     }
 }
+
+/* --- Education Section --- */
+.education-timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.education-card {
+    padding: 2.5rem;
+}
+
+.edu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.edu-title-group h3 {
+    font-size: 1.4rem;
+    color: var(--text-primary);
+    margin-bottom: 0.3rem;
+}
+
+.edu-institution {
+    font-size: 1.1rem;
+    color: var(--accent-blue);
+    font-weight: 500;
+}
+
+.edu-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    gap: 0.4rem;
+}
+
+.edu-date {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.edu-location {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.edu-grade {
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+    .edu-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .edu-meta {
+        align-items: flex-start;
+        text-align: left;
+    }
+}
+

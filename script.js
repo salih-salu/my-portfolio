@@ -203,3 +203,48 @@ contactForm.addEventListener('submit', (e) => {
         formStatus.style.color = '#ef4444';
     });
 });
+
+// --- Certificate Lightbox Modal Controller ---
+const certModal = document.getElementById('cert-modal');
+const certModalImg = document.getElementById('cert-modal-img');
+const certModalTitle = document.getElementById('cert-modal-title');
+const certModalDownload = document.getElementById('cert-modal-download');
+
+function openCertModal(imageSrc, title) {
+    if (!certModal) return;
+    certModalImg.src = imageSrc;
+    certModalImg.alt = title || 'Certificate';
+    if (certModalTitle) certModalTitle.textContent = title || 'Certificate Preview';
+    if (certModalDownload) {
+        certModalDownload.href = imageSrc;
+        certModalDownload.download = (title ? title.replace(/[^a-zA-Z0-9_-]/g, '_') : 'Certificate') + '.jpg';
+    }
+    certModal.classList.add('active');
+    certModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeCertModal() {
+    if (!certModal) return;
+    certModal.classList.remove('active');
+    certModal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+}
+
+// Close modal on Escape key press
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && certModal && certModal.classList.contains('active')) {
+        closeCertModal();
+    }
+});
+
+// Keyboard accessibility for interactive certificate containers
+document.querySelectorAll('.cert-image-container').forEach(container => {
+    container.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            container.click();
+        }
+    });
+});
+

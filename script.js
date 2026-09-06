@@ -238,8 +238,8 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-// Keyboard accessibility for interactive certificate containers
-document.querySelectorAll('.cert-image-container').forEach(container => {
+// Keyboard accessibility for interactive certificate containers and gallery cards
+document.querySelectorAll('.cert-image-container, .gallery-card').forEach(container => {
     container.addEventListener('keydown', (e) => {
         if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault();

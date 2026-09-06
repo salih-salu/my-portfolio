@@ -49,6 +49,7 @@
                 <a href="#about" class="nav-link">About</a>
                 <a href="#skills" class="nav-link">Skills</a>
                 <a href="#projects" class="nav-link">Projects</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
                 <a href="#certifications" class="nav-link">Certifications</a>
                 <a href="#education" class="nav-link">Education</a>
                 <a href="#contact" class="nav-link">Contact</a>
@@ -440,6 +441,63 @@
                         </div>
                     </div>
                 </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Gallery Section -->
+    <section id="gallery" class="section gallery-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Professional Gallery</h2>
+                <p class="section-subtitle">Moments in action &bull; Technical presentations, development workflow, and data intelligence</p>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- Gallery Item 1: Presentation -->
+                <div class="gallery-card glass-card" onclick="openCertModal('gallery_presentation.jpg', 'Technical Presentation - Network Attack Detection & Machine Learning')" role="button" tabindex="0" aria-label="View technical presentation photo full size">
+                    <div class="gallery-img-wrap">
+                        <img src="gallery_presentation.jpg" alt="Mohammed Salih delivering a technical presentation on Machine Learning and Network Attack Detection" class="gallery-img" loading="lazy">
+                        <div class="gallery-overlay">
+                            <span class="gallery-zoom-icon"><i class="fas fa-search-plus"></i></span>
+                        </div>
+                        <span class="gallery-badge"><i class="fas fa-chalkboard-teacher"></i> Tech Presentation</span>
+                    </div>
+                    <div class="gallery-content">
+                        <h4 class="gallery-title">ML & Cyber Defense Presentation</h4>
+                        <p class="gallery-desc">Delivering insights on binary anomaly classifiers, attack recall maximization, and machine learning pipelines.</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2: Development -->
+                <div class="gallery-card glass-card" onclick="openCertModal('gallery_workspace.jpg', 'Deep Focus - AI & Software Engineering Session')" role="button" tabindex="0" aria-label="View workspace development photo full size">
+                    <div class="gallery-img-wrap">
+                        <img src="gallery_workspace.jpg" alt="Mohammed Salih coding in development environment" class="gallery-img" loading="lazy">
+                        <div class="gallery-overlay">
+                            <span class="gallery-zoom-icon"><i class="fas fa-search-plus"></i></span>
+                        </div>
+                        <span class="gallery-badge"><i class="fas fa-laptop-code"></i> Engineering Focus</span>
+                    </div>
+                    <div class="gallery-content">
+                        <h4 class="gallery-title">Engineering & Architecture</h4>
+                        <p class="gallery-desc">Hands-on model development, algorithmic problem solving, and building scalable full-stack AI solutions.</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3: Analytics Dashboard -->
+                <div class="gallery-card glass-card" onclick="openCertModal('gallery_analytics.jpg', 'Data Intelligence - Vessel Optimization Power BI Session')" role="button" tabindex="0" aria-label="View data analytics dashboard photo full size">
+                    <div class="gallery-img-wrap">
+                        <img src="gallery_analytics.jpg" alt="Mohammed Salih analyzing Vessel Intelligence System Dashboard in Power BI" class="gallery-img" loading="lazy">
+                        <div class="gallery-overlay">
+                            <span class="gallery-zoom-icon"><i class="fas fa-search-plus"></i></span>
+                        </div>
+                        <span class="gallery-badge"><i class="fas fa-chart-pie"></i> Business Intelligence</span>
+                    </div>
+                    <div class="gallery-content">
+                        <h4 class="gallery-title">Vessel Intelligence Analytics</h4>
+                        <p class="gallery-desc">Designing interactive analytics dashboards for data-driven maritime optimization and revenue trends.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

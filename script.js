@@ -7,7 +7,7 @@ document.addEventListener('mousemove', (e) => {
 
 // --- Typewriter Effect ---
 const typewriterElement = document.getElementById('typewriter-text');
-const roles = ["Data Scientist", "Data Analyst", "AI ML Engineer"];
+const roles = ["AI/ML Engineer", "Machine Learning Engineer", "Deep Learning & GenAI Developer", "Data Scientist"];
 let roleIndex = 0;
 let charIndex = 0;
 let isDeleting = false;

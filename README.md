@@ -25,30 +25,6 @@ A responsive portfolio website built with a modern glassmorphism design, neural 
 
 ---
 
-## 🛠️ Built With
-
-* **HTML5** — Semantic structure and accessible markup
-* **CSS3** — Custom properties, CSS grid, flexbox, glassmorphism, responsive media queries
-* **JavaScript (Vanilla)** — Canvas neural animation, typewriter effect, modal controller, smooth scroll tracking
-* **FontAwesome** — Modern UI icons
-
----
-
-## 💻 How to Run Locally
-
-### Method 1: Direct File Open
-Double-click `index.html` or open it in any browser (Chrome, Edge, Firefox).
-
-### Method 2: Local HTTP Server (Python)
-Run the following command in the project directory:
-
-```bash
-python -m http.server 8000
-```
-
-Then visit [http://localhost:8000](http://localhost:8000) in your browser.
-
----
 
 ## 📬 Contact
 

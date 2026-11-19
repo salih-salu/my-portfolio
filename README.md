@@ -34,5 +34,3 @@ A responsive portfolio website built with a modern glassmorphism design, neural 
 * **WhatsApp:** [+91 77365 96093](https://wa.me/917736596093)
 
 ---
-
-© 2026 Mohammed Salih C K. All rights reserved.

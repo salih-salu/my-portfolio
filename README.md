@@ -2,7 +2,7 @@
 
 Personal portfolio website showcasing my projects, skills, experience, and background as an **AI/ML Engineer**.
 
-🌐 **Live Demo:** [salih-salu.github.io/my-portfolio](https://salih-salu.github.io/my-portfolio/) *(or custom domain)*  
+🌐 **Live Demo:** [salih-salu.github.io/my-portfolio](https://salih-salu.github.io/my-portfolio/)
 📄 **Resume:** [Download Resume (PDF)](resume.pdf)
 
 ---
